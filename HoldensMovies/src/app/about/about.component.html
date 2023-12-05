@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="container" *ngFor="let c of cards; index as i" >
+    <input type="radio" name="slide">
+    <div style.background-image="url('{{c.image}}')" class="card">
+      <div class="row">
+        <div class="icon">{{i + 1}}</div>
+        <div class="description">
+          <h4>{{ c.title }}</h4>
+          <p>{{ c.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<body class="bg">
+<div class="login-form">
+  <h2 class="title">HOLDEN'S MOVIES</h2>
+  <h3 class="login">Login</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div class="username">
+      <input type="text" class="user-input" placeholder="Username" formControlName="username">
+    </div>
+    <div class="password">
+      <input type="password" class="password-input" placeholder="Password" formControlName="password">
+    </div>
+    <button class="submit" type="submit" [disabled]="!loginForm.valid">Submit</button>
+  </form>
+</div>
+</body>

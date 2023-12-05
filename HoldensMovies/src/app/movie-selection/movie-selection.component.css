@@ -1,0 +1,30 @@
+.container{
+  padding: 24px 20%;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.responsive{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 48px;
+}
+
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.price{
+  font-family: "Montserrat", sans-serif;
+  text-align: right;
+}
+
+.add_cart{
+  margin-left: auto;
+}

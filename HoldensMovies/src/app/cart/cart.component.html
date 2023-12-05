@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>My Cart</h1>
+  <table *ngIf="cart().length > 0">
+    <thead>
+      <th>Movie</th>
+      <th>Price</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of cart()">
+        <td>{{ movie.title }}</td>
+        <td>{{ movie.price | currency: 'USD'}}</td>
+        <button (click)="removeFromCart(movie)">Remove</button>
+      </tr>
+    </tbody>
+  </table>
+  <div class="total_container" *ngIf="cart().length > 0">
+    <p>
+      Total: <span>{{ total() | currency: 'USD' }}</span>
+    </p>
+  </div>
+</div>

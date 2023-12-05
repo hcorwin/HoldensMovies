@@ -1,0 +1,15 @@
+<div class="container responsive">
+  <mat-card *ngFor="let movie of movies()">
+    <img mat-card-image [src]=transform(movie.image) alt="movie image"/>
+    <mat-card-content>
+      <br />
+      <p class="title">{{ movie.title }}</p>
+      <br />
+      <p class="price">{{ movie.price | currency: 'USD'}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="more_info" mat-button (click)="viewMoreInfo(movie)">More Info</button>
+      <button class="add_cart" mat-button (click)="addToCart(movie)">Add To Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
