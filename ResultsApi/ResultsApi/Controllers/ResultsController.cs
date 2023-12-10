@@ -21,7 +21,10 @@ namespace ResultsApi.Controllers
         [HttpGet("results")]
         public async Task<ActionResult> GetResults()
         {
-            var results = await _dbContext.Results.ToListAsync();
+            var results = await _dbContext.Results
+                .AsNoTracking()
+                .ToListAsync();
+
             return Ok(results);
         }
     }
