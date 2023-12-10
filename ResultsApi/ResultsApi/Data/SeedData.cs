@@ -1,7 +1,5 @@
 ﻿using ResultsApi.Models;
 using ResultsApi.Services;
-using System.Drawing.Imaging;
-using System.Text;
 using SixLabors.ImageSharp.Formats.Png;
 
 
@@ -79,7 +77,7 @@ namespace ResultsApi.Data
                                       " to corrupt its owner. A fellowship of hobbits, elves, dwarfs, and men is formed to destroy the ring by casting it into the" +
                                       " volcanic fires of the Crack of Doom, where it was forged. They are opposed on their harrowing mission by",
                         Price = 50,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/lotr.jpg"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/lotr.jpg"))),
                         VideoId = "https://www.youtube.com/embed/cnf4h5HT4dc?si=j9mMiPXfEqAO72fE"
                     },
                     new()
@@ -95,7 +93,7 @@ namespace ResultsApi.Data
                                       "Potter explores numerous themes and includes many cultural meanings and references.[1] Major themes in the series include" +
                                       " prejudice, corruption, madness, and death",
                         Price = 80,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/HarryPotter.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/HarryPotter.png"))),
                         VideoId = "https://www.youtube.com/embed/LYKxhbcZrN8?si=1XMzQOkyQsR7EbX7"
                     },
                     new ()
@@ -106,7 +104,7 @@ namespace ResultsApi.Data
                                       " he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone's mind." +
                                       " If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb's every move.",
                         Price = 15,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/inception.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/inception.png"))),
                         VideoId = "https://www.youtube.com/embed/YoHD9XEInc0?si=6R2BqWbf2lsdAekj"
                     },
                     new()
@@ -123,7 +121,7 @@ namespace ResultsApi.Data
                                       " in Alberta, Iceland, and Los Angeles. Interstellar uses extensive practical and miniature effects, and the company Double Negative" +
                                       " created additional digital effects.",
                         Price = 12,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/interstellar.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/interstellar.png"))),
                         VideoId = "https://www.youtube.com/embed/2LqzF5WauAw?si=z8Z2SqAbakA3rhU3"
                     },
                     new()
@@ -136,7 +134,7 @@ namespace ResultsApi.Data
                                       " in a money laundering operation led by the prison warden Samuel Norton (Bob Gunton). William Sadler, Clancy Brown, Gil Bellows," +
                                       " and James Whitmore appear in supporting roles.",
                         Price = 18,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/shawshank.jpg"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/shawshank.jpg"))),
                         VideoId = "https://www.youtube.com/embed/PLl99DlL6b4?si=-92zBCdQAurLw9zD"
                     },
                     new()
@@ -148,7 +146,7 @@ namespace ResultsApi.Data
                                       " reprise their roles from the original film. Gosling plays K, a Nexus-9 replicant \"blade runner\" who uncovers a secret that" +
                                       " threatens to destabilize society and the course of civilization.",
                         Price = 20,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/bladerunner.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/bladerunner.png"))),
                         VideoId = "https://www.youtube.com/embed/gCcx85zbxz4?si=VTCiK0heN91fA7G9"
                     },
                     new()
@@ -161,7 +159,7 @@ namespace ResultsApi.Data
                                       " a financial and critical success, grossing US$122 million worldwide. It was chosen by the National Board of Review as one of the" +
                                       " top ten films of 2013, and at the 86th Academy Awards, Roger Deakins was nominated for Best Cinematography.",
                         Price = 17,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/prisoners.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/prisoners.png"))),
                         VideoId = "https://www.youtube.com/embed/bpXfcTF6iVk?si=y8F5x5_EVZaQsnVS"
                     },
                     new()
@@ -176,7 +174,7 @@ namespace ResultsApi.Data
                                       " positive reviews from critics for its humor, mystery, and the performances of Crowe and Gosling. It grossed $62 million on" +
                                       " a $50 million budget.",
                         Price = 15,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the nice guys.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the nice guys.png"))),
                         VideoId = "https://www.youtube.com/embed/GQR5zsLHbYw?si=RF9vacXgHvSkO1_5"
                     },
                     new()
@@ -191,7 +189,7 @@ namespace ResultsApi.Data
                                       " led by Saigō Takamori, and the Westernization of Japan by foreign powers.[a] The character of Algren is based on Eugène Collache" +
                                       " and Jules Brunet, both French Imperial Guard officers who fought alongside Enomoto Takeaki in the earlier Boshin War.",
                         Price = 19,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the last samurai.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the last samurai.png"))),
                         VideoId = "https://www.youtube.com/embed/YX265wacZcY?si=SquL49J6BDmGHZtf"
                     },
                     new()
@@ -214,7 +212,7 @@ namespace ResultsApi.Data
                                       " Eight years after the events of The Dark Knight, the terrorist Bane forces Bruce Wayne to resume his role as Batman and save" +
                                       " Gotham City from nuclear destruction. ",
                         Price = 50,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/dark knight.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/dark knight.png"))),
                         VideoId = "https://www.youtube.com/embed/zkNDVV2RpQg?si=LUZcVPkg9gJXhAj1"
                     },
                     new()
@@ -226,7 +224,7 @@ namespace ResultsApi.Data
                                       " during World War II. It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish" +
                                       " accountant Itzhak Stern.",
                         Price = 12,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/schindlers list.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/schindlers list.png"))),
                         VideoId = "https://www.youtube.com/embed/mxphAlJID9U?si=bAOBlrXSf78Cog74"
                     },
                     new()
@@ -237,7 +235,7 @@ namespace ResultsApi.Data
                                       " arrival of an enigmatic convict (Michael Clarke Duncan) at his facility. David Morse, Bonnie Hunt, Sam Rockwell, and James Cromwell" +
                                       " appear in supporting roles.",
                         Price = 15,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/green mile.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/green mile.png"))),
                         VideoId = "https://www.youtube.com/embed/Bg7epsq0OIQ?si=RlHtEDHEjoYV__lr"
                     },
                     new()
@@ -247,7 +245,7 @@ namespace ResultsApi.Data
                                       " novel by Christopher Priest. It stars Hugh Jackman as Robert Angier and Christian Bale as Alfred Borden, rival stage magicians in Victorian London" +
                                       " who feud over a perfect teleportation trick.",
                         Price = 14,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the prestige.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/the prestige.png"))),
                         VideoId = "https://www.youtube.com/embed/ELq7V8vkekI?si=ivG9IeF_rXzUzVFv"
                     },
                     new()
@@ -260,7 +258,7 @@ namespace ResultsApi.Data
                                       " the ambitious son of Emperor Marcus Aurelius, murders his father and seizes the throne. Reduced to slavery, Maximus becomes a gladiator and rises" +
                                       " through the ranks of the arena to avenge the murders of his family and his emperor.",
                         Price = 15,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/gladiator.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/gladiator.png"))),
                         VideoId = "https://www.youtube.com/embed/P5ieIbInFpg?si=ZNkkRafdSnw8bFvV"
                     },
                     new()
@@ -271,7 +269,7 @@ namespace ResultsApi.Data
                                       " is arrested for attacking a police officer, Professor Lambeau makes a deal to get leniency for him if he will get treatment from therapist Sean Maguire" +
                                       " (Robin Williams).",
                         Price = 12,
-                        Image = GenerateImageBytes(Image.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/good will hunting.png"))),
+                        Image = GenerateImageBytes(await Image.LoadAsync(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images/good will hunting.png"))),
                         VideoId = "https://www.youtube.com/embed/ReIJ1lbL-Q8?si=bEzpEguycxLUgdtv"
                     }
                 };

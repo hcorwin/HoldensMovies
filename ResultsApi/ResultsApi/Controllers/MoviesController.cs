@@ -21,7 +21,9 @@ namespace ResultsApi.Controllers
         [HttpGet("movies")]
         public async Task<ActionResult> GetMovies()
         {
-            var movies = await _dbContext.Movies.ToListAsync();
+            var movies = await _dbContext.Movies
+                .AsNoTracking()
+                .ToListAsync();
 
             var moviesWithBase64Image = movies.Select(x => new
             {
