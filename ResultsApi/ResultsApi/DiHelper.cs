@@ -45,7 +45,7 @@ internal static class DiHelper
         });
     }
 
-    private static void RegisterDb(this IServiceCollection serviceCollection, IConfigurationRoot config)
+    private static void RegisterDb(this IServiceCollection serviceCollection, IConfiguration config)
     {
         serviceCollection.AddDbContextFactory<ResultsContext>(options =>
             options.UseSqlServer(config.GetConnectionString("ResultsConnectionString")));
